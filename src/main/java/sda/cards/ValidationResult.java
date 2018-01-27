@@ -1,8 +1,8 @@
 package sda.cards;
 
 public class ValidationResult {
-  /*  private String issuer;
-    private Boolean luhnResult;     //lub private boolean luhnResult = false;
+    private String issuer;
+    private Boolean luhnPassed;     //lub private boolean luhnResult = false;
                                     //z duzej litery nie wymaga przypisania - moze byc null
 
     public String getIssuer() {
@@ -13,11 +13,12 @@ public class ValidationResult {
         this.issuer = issuer;
     }
 
-    public Boolean getLuhnResult() {
-        return luhnResult;
+    public Boolean isLuhnPassed() {
+        return luhnPassed;
     }
 
-    public void setLuhnResult(Boolean luhnResult) {
-        this.luhnResult = luhnResult;
-    }*/
+    public void setLuhnPassed(Boolean luhnPassed) {
+        this.luhnPassed = luhnPassed;
+    }
 }
+
