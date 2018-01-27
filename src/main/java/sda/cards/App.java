@@ -1,23 +1,19 @@
 package sda.cards;
 
 
+import sda.cards.fileReader.IFileReader;
 import sda.cards.fileReader.RulesIFileReader;
 
 import java.util.Scanner;
 
 public class App {
+    static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
 
-        System.out.println("Podaj sciezke do pliku z regulami:");
-        Scanner scanner = new Scanner(System.in);
-        String path = scanner.nextLine();
+        loadRules();
 
-        RulesIFileReader rules = new RulesIFileReader(path);
-        IssuerRules[] data = rules.readData();
-
-        for(int i = 0; i<data.length; i++){
-            System.out.println(data[i]);
-        }
+        passCardNumber();
 
 
         ICardValidator validator = new SDACardValidator();
@@ -25,10 +21,20 @@ public class App {
         System.out.println("ISSUER: " + result.getIssuer());
         System.out.println("LUHN PASSED: " + result.isLuhnPassed());
 
+    }
 
 
+    private static void loadRules() {
+        System.out.println("Podaj sciezke do pliku z regulami:");
 
+        String path = scanner.nextLine();
 
+        IFileReader rules = new RulesIFileReader(path);
+        IssuerRule[] data = rules.readData();
+    }
 
+    private static void passCardNumber() {
+        System.out.println("Podaj nr karty: ");
+        String cardNo = scanner.nextLine();
     }
 }

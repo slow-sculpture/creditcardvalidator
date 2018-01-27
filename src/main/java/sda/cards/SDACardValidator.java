@@ -6,7 +6,7 @@ public class SDACardValidator implements ICardValidator {
         ValidationResult result = new ValidationResult();
 
 
-        IIssuerDetector detector = new IIssuerDetectroImpl();
+        IIssuerDetector detector = new IssuerDetectorImpl();
         String issuer = detector.detectIssuer(cardNo);
 
         ILuhnValidator validator = new LuhnValidatorImpl();

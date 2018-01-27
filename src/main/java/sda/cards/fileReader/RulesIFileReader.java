@@ -1,7 +1,7 @@
 package sda.cards.fileReader;
 
 
-import sda.cards.IssuerRules;
+import sda.cards.IssuerRule;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -13,8 +13,8 @@ public class RulesIFileReader extends AbstractIFileReader {
         super(path);
     }
 
-    public IssuerRules[] readData() {
-        IssuerRules[] rules = new IssuerRules[7];
+    public IssuerRule[] readData() {
+        IssuerRule[] rules = new IssuerRule[7];
         int i = 0;
 
         try {
@@ -23,7 +23,7 @@ public class RulesIFileReader extends AbstractIFileReader {
                 String line;
                 while((line=bf.readLine())!=null){
                     String[] split = line.split(";");
-                    IssuerRules data = new IssuerRules(split[0]);
+                    IssuerRule data = new IssuerRule(split[0]);
                     data.setPrefix(Integer.parseInt(split[1]));
                     data.setNoLength(Integer.parseInt(split[2]));
                     rules[i++] = data;

@@ -1,15 +1,15 @@
 package sda.cards;
 
-public class IssuerRules {
+public class IssuerRule {
     private String issuer;
     private int prefix;
     private int noLength;
 
-    public IssuerRules(String issuer) {
+    public IssuerRule(String issuer) {
         this.issuer = issuer;
     }
 
-    public IssuerRules(String issuer, int prefix, int noLength) {
+    public IssuerRule(String issuer, int prefix, int noLength) {
         this.issuer = issuer;
         this.prefix = prefix;
         this.noLength = noLength;
