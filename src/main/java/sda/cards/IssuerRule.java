@@ -2,14 +2,14 @@ package sda.cards;
 
 public class IssuerRule {
     private String issuer;
-    private int prefix;
+    private String prefix;
     private int noLength;
 
     public IssuerRule(String issuer) {
         this.issuer = issuer;
     }
 
-    public IssuerRule(String issuer, int prefix, int noLength) {
+    public IssuerRule(String issuer, String prefix, int noLength) {
         this.issuer = issuer;
         this.prefix = prefix;
         this.noLength = noLength;
@@ -22,11 +22,11 @@ public class IssuerRule {
         this.issuer = issuer;
     }
 
-    public int getPrefix() {
+    public String getPrefix() {
         return prefix;
     }
 
-    public void setPrefix(int prefix) {
+    public void setPrefix(String prefix) {
         this.prefix = prefix;
     }
 

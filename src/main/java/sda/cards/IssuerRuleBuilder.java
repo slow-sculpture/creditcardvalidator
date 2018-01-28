@@ -9,6 +9,9 @@ import java.util.Scanner;
  * oraz stworzenie listy zawierającej reguły typu IssuerRule
  */
 
+//////// u mnie to robi (chyba) RulesFileReader
+    /// wiec to mi niepotrzebne
+
 public class IssuerRuleBuilder {
     public List<IssuerRule> prepareRules(){
         //TODO: wczytanie pliku, przetworzenie pliku i zbudowanie listy zawierającej reguły

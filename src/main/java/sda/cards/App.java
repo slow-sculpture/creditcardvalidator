@@ -11,30 +11,21 @@ public class App {
 
     public static void main(String[] args) {
 
-        //loadRules();
 
-        passCardNumber();
-
-
-        ICardValidator validator = new SDACardValidator();
-        ValidationResult result = validator.validateCardNo(args[0]);
-        System.out.println("ISSUER: " + result.getIssuer());
-        System.out.println("LUHN PASSED: " + result.isLuhnPassed());
-
-    }
-
-
-    private static void loadRules() {
-        System.out.println("Podaj sciezke do pliku z regulami:");
-
-        String path = scanner.nextLine();
-
-        IFileReader rules = new RulesFileReader(path);
-        IssuerRule[] data = rules.readData();
-    }
-
-    private static void passCardNumber() {
         System.out.println("Podaj nr karty: ");
         String cardNo = scanner.nextLine();
+
+        IIssuerDetector detectIssuer = new IssuerDetectorImpl();
+        detectIssuer.detectIssuer(cardNo);
+
+
+      /*  ICardValidator validator = new SDACardValidator();
+        ValidationResult result = validator.validateCardNo(args[0]);
+        System.out.println("ISSUER: " + result.getIssuer());
+        System.out.println("LUHN PASSED: " + result.isLuhnPassed());*/
+
     }
+
+
+
 }

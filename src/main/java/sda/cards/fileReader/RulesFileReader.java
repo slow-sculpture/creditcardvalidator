@@ -25,7 +25,7 @@ public class RulesFileReader extends AbstractIFileReader {
                 while((line=bf.readLine())!=null){
                     String[] split = line.split(";");
                     IssuerRule data = new IssuerRule(split[0]);
-                    data.setPrefix(Integer.parseInt(split[1]));
+                    data.setPrefix(split[1]);
                     data.setNoLength(Integer.parseInt(split[2]));
                     rules[i++] = data;
                 }
