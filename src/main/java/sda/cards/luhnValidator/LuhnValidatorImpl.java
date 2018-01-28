@@ -1,4 +1,4 @@
-package sda.cards;
+package sda.cards.luhnValidator;
 
 public class LuhnValidatorImpl implements ILuhnValidator {
     @Override
@@ -20,7 +20,7 @@ public class LuhnValidatorImpl implements ILuhnValidator {
             result = !result;
 
         }
-        System.out.println(result);
+
         return (sum % 10 == 0);
 
         /**jego wersja

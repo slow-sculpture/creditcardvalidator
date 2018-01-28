@@ -1,6 +1,6 @@
 package sda.cards.fileReader;
 
-import sda.cards.IssuerRule;
+import sda.cards.rules.IssuerRule;
 
 public interface IFileReader {
     IssuerRule[] readData();

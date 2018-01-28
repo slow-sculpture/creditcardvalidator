@@ -1,11 +1,7 @@
-package sda.cards;
+package sda.cards.issuerDetector;
 
-import sda.cards.fileReader.IFileReader;
+import sda.cards.rules.IssuerRule;
 import sda.cards.fileReader.RulesFileReader;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
 
 /**
  * Klasa ma za zadanie wczytac plik, zbudowac liste regul
@@ -41,7 +37,7 @@ public class IssuerDetectorImpl implements IIssuerDetector {
             }
 
         }
-        System.out.println(issuer);
+
         return issuer;
     }
 

@@ -1,4 +1,4 @@
-package sda.cards;
+package sda.cards.rules;
 
 
 import java.util.List;

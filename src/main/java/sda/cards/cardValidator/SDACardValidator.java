@@ -1,4 +1,9 @@
-package sda.cards;
+package sda.cards.cardValidator;
+
+import sda.cards.issuerDetector.IIssuerDetector;
+import sda.cards.issuerDetector.IssuerDetectorImpl;
+import sda.cards.luhnValidator.ILuhnValidator;
+import sda.cards.luhnValidator.LuhnValidatorImpl;
 
 public class SDACardValidator implements ICardValidator {
 

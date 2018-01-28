@@ -1,4 +1,4 @@
-package sda.cards;
+package sda.cards.rules;
 
 public class IssuerRule {
     private String issuer;

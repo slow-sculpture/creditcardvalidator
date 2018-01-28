@@ -3,6 +3,8 @@ package sda.cards;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import sda.cards.cardValidator.SDACardValidator;
+import sda.cards.cardValidator.ValidationResult;
 
 import java.util.Arrays;
 import java.util.Collection;

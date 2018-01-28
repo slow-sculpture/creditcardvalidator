@@ -1,4 +1,4 @@
-package sda.cards;
+package sda.cards.cardValidator;
 
 public class ValidationResult {
     private String issuer;

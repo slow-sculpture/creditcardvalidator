@@ -1,6 +1,6 @@
 package sda.cards.fileReader;
 
-import sda.cards.IssuerRule;
+import sda.cards.rules.IssuerRule;
 
 public abstract class AbstractIFileReader implements IFileReader {
     protected String path;

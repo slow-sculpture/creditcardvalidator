@@ -1,8 +1,9 @@
 package sda.cards;
 
 
-import sda.cards.fileReader.IFileReader;
-import sda.cards.fileReader.RulesFileReader;
+import sda.cards.cardValidator.ICardValidator;
+import sda.cards.cardValidator.SDACardValidator;
+import sda.cards.cardValidator.ValidationResult;
 
 import java.util.Scanner;
 

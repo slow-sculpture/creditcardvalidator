@@ -1,13 +1,12 @@
 package sda.cards.fileReader;
 
 
-import sda.cards.IssuerRule;
+import sda.cards.rules.IssuerRule;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.List;
 
 public class RulesFileReader extends AbstractIFileReader {
     public RulesFileReader(String path) {
