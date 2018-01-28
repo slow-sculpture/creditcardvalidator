@@ -24,17 +24,20 @@ public class IssuerDetectorImpl implements IIssuerDetector {
         RulesFileReader ruleBuilder = new RulesFileReader("C:\\Users\\chris\\IdeaProjects\\validator\\src\\main\\java\\sda\\cards\\cardRules");
         IssuerRule[] rules = ruleBuilder.readData();
 
-        String issuer = "noname";
+        String issuer = "Unsupported";
 
         for (IssuerRule data : rules) {
             //TODO: spr czy prefix i dlugosc sie zgadzaja
             //jesli tak to zwracamy name
             if (cardNo.startsWith(data.getPrefix()) && cardNo.length()==data.getNoLength()) {
-                System.out.println(data.getIssuer());
-                break;
+                issuer = data.getIssuer();
+                System.out.println(issuer);
+                return issuer;
             }
+
         }
-        return null;
+        System.out.println(issuer);
+        return issuer;
     }
 
 
