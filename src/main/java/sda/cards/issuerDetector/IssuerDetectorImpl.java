@@ -37,7 +37,6 @@ public class IssuerDetectorImpl implements IIssuerDetector {
             }
 
         }
-
         return issuer;
     }
 
