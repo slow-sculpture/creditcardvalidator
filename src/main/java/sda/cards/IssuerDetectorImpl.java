@@ -29,6 +29,11 @@ public class IssuerDetectorImpl implements IIssuerDetector {
         for (IssuerRule data : rules) {
             //TODO: spr czy prefix i dlugosc sie zgadzaja
             //jesli tak to zwracamy name
+
+            //ja sobie zmienilem prefix na String i dziala
+            //on w if przekonwertowal inta na String o tak:
+            // cardNo.startsWith(String.valueOf(issuerRule.getPrefix()))
+
             if (cardNo.startsWith(data.getPrefix()) && cardNo.length()==data.getNoLength()) {
                 issuer = data.getIssuer();
                 System.out.println(issuer);

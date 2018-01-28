@@ -20,7 +20,28 @@ public class LuhnValidatorImpl implements ILuhnValidator {
             result = !result;
 
         }
+        System.out.println(result);
         return (sum % 10 == 0);
 
+        /**jego wersja
+
+        int[] carNumberArray = new int[cardNo.length()];
+        for (int i = 0l i < cardNo.length(); i++) {
+            carNumberArray[i] = Character.getNumericValue(cardNo.charAt(i));
+        }
+        int sum = 0;
+        int j = 0;
+        for (int i = carNumberArray.length - 1; i >= 0; i--) {
+            int element = carNumberArray[i];
+            j++;
+            if (j % 2 == 0) {
+                element=element*2;
+                if(element>=10){
+                    element=element-9;
+                }
+            }
+        sum=sum+element;
+        }
+        return sum%10==0;*/
     }
 }
