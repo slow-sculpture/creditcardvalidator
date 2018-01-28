@@ -15,14 +15,19 @@ public class App {
         System.out.println("Podaj nr karty: ");
         String cardNo = scanner.nextLine();
 
-        IIssuerDetector detectIssuer = new IssuerDetectorImpl();
-        detectIssuer.detectIssuer(cardNo);
+        //ponizsze spoko ale latwiej bedzie wywolac
+        //detector w klasie SDACardValidator na obiekcie result
+        /*IIssuerDetector detectIssuer = new IssuerDetectorImpl();
+        String issuer = detectIssuer.detectIssuer(cardNo);
+        System.out.println("Issuer: " + issuer);*/
 
 
-      /*  ICardValidator validator = new SDACardValidator();
-        ValidationResult result = validator.validateCardNo(args[0]);
-        System.out.println("ISSUER: " + result.getIssuer());
-        System.out.println("LUHN PASSED: " + result.isLuhnPassed());*/
+        ICardValidator validator = new SDACardValidator();
+        ValidationResult result = validator.validateCardNo(cardNo);
+
+
+       System.out.println("ISSUER: " + result.getIssuer());
+       System.out.println("LUHN PASSED: " + result.isLuhnPassed());
 
     }
 
