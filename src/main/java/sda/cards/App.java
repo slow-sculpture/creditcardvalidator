@@ -2,7 +2,7 @@ package sda.cards;
 
 
 import sda.cards.fileReader.IFileReader;
-import sda.cards.fileReader.RulesIFileReader;
+import sda.cards.fileReader.RulesFileReader;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        loadRules();
+        //loadRules();
 
         passCardNumber();
 
@@ -29,7 +29,7 @@ public class App {
 
         String path = scanner.nextLine();
 
-        IFileReader rules = new RulesIFileReader(path);
+        IFileReader rules = new RulesFileReader(path);
         IssuerRule[] data = rules.readData();
     }
 

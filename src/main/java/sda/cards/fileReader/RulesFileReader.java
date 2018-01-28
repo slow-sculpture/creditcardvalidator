@@ -7,9 +7,10 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 
-public class RulesIFileReader extends AbstractIFileReader {
-    public RulesIFileReader(String path) {
+public class RulesFileReader extends AbstractIFileReader {
+    public RulesFileReader(String path) {
         super(path);
     }
 
@@ -39,4 +40,6 @@ public class RulesIFileReader extends AbstractIFileReader {
 
         return rules;
     }
+
+
 }
