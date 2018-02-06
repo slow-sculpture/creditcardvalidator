@@ -8,8 +8,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class RulesFileReader extends AbstractIFileReader {
-    public RulesFileReader(String path) {
+public class RulesFileBuilder extends AbstractIFileReader {
+    public RulesFileBuilder(String path) {
         super(path);
     }
 

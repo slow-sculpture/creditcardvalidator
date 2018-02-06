@@ -12,9 +12,9 @@ public class App {
 
     public static void main(String[] args) {
 
-
         System.out.println("Podaj nr karty: ");
         String cardNo = scanner.nextLine();
+
 
         //ponizsze spoko ale latwiej bedzie wywolac
         //detector w klasie SDACardValidator na obiekcie result

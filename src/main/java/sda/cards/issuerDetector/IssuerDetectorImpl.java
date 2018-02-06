@@ -1,7 +1,7 @@
 package sda.cards.issuerDetector;
 
+import sda.cards.fileReader.RulesFileBuilder;
 import sda.cards.rules.IssuerRule;
-import sda.cards.fileReader.RulesFileReader;
 
 /**
  * Klasa ma za zadanie wczytac plik, zbudowac liste regul
@@ -17,7 +17,7 @@ public class IssuerDetectorImpl implements IIssuerDetector {
 
 
 
-        RulesFileReader ruleBuilder = new RulesFileReader("C:\\Users\\chris\\IdeaProjects\\validator\\src\\main\\java\\sda\\cards\\cardRules");
+        RulesFileBuilder ruleBuilder = new RulesFileBuilder("C:\\Users\\chris\\IdeaProjects\\validator\\src\\main\\java\\sda\\cards\\cardRules");
         IssuerRule[] rules = ruleBuilder.readData();
 
         String issuer = "Unsupported";

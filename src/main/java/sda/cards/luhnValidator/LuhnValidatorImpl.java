@@ -8,16 +8,16 @@ public class LuhnValidatorImpl implements ILuhnValidator {
         int sum = 0;
 
         //TODO: zaimplementowac algorytm Luhna
-        for (int i = cardNo.length() - 1; i >= 0; i--) {
-            int n = Integer.parseInt(cardNo.substring(i, i + 1));
-            if (result) {
-                n *= 2;
-                if (n > 9) {
-                    n = (n % 10) + 1;
+            for (int i = cardNo.length() - 1; i >= 0; i--) {
+                int n = Integer.parseInt(cardNo.substring(i, i + 1));
+                if (result) {
+                    n *= 2;
+                    if (n > 9) {
+                        n = (n % 10) + 1;
+                    }
                 }
-            }
-            sum += n;
-            result = !result;
+                sum += n;
+                result = !result;
 
         }
 

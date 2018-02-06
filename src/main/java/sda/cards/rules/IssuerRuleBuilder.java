@@ -14,9 +14,21 @@ import java.util.Scanner;
  * oraz stworzenie listy zawierającej reguły typu IssuerRule
  */
 
-//////// u mnie to robi  RulesFileReader
+//////// u mnie to robi  RulesFileBuilder
 /// wiec to mi niepotrzebne
 //ale przepisalem bo on robi liste a ja robilem tablice
+//ponadto mozna to wszystko zamienic na listę map przechowujacych reguly (jako klucze nazwy pol
+// a jako wartosci splity przeczytane z pliku
+    //np. List<Map<String, String>> myList = new ArrayList<>();
+    //logika odczytu
+    //tworzymy mape K, V
+    // Map<String, String> tempMap = new HashMap<>();
+    //wsadzamy K, V do mapy
+    //tempMap.put("name", split[0]);
+    //tempMap.put("prefix", split[1]);
+    //tempMap.put("length", split[2]);
+    //dodajemy powyzsze do listy
+    //myList.add(tempMap);
 
 public class IssuerRuleBuilder {
     private final static String FILE_PATH = "C:\\Users\\chris\\IdeaProjects\\validator\\src\\main\\java\\sda\\cards\\cardRules";
@@ -26,7 +38,7 @@ public class IssuerRuleBuilder {
     public List<IssuerRule> buildRules() {
         //TODO: wczytanie pliku, przetworzenie pliku i zbudowanie listy zawierającej reguły
 
-        List<IssuerRule>result = new ArrayList<>();
+        List<IssuerRule> result = new ArrayList<>();
         try {
             try {
                 FileReader reader = new FileReader(FILE_PATH);
@@ -51,7 +63,7 @@ public class IssuerRuleBuilder {
                 e.printStackTrace();
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.getMessage();
         }
 
